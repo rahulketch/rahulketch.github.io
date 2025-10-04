@@ -455,19 +455,32 @@ section h2 {
     color: #666;
 }
 
-.map-placeholder {
-    background: var(--bg-light);
-    border-radius: 15px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed var(--accent-color);
+.venue-map {
+    position: relative;
 }
 
-.map-placeholder p {
-    font-size: 1.2rem;
-    color: #999;
+.venue-map iframe {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 450px;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.map-link:hover {
+    background: var(--burgundy);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(92, 64, 51, 0.3);
 }
 
 /* =====================================
