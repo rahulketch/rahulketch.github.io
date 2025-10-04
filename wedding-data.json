@@ -87,7 +87,16 @@
     "status": "Details to be announced",
     "description": "We're planning a trip right after the wedding! More details will be shared soon. Stay tuned!"
   },
+  "rsvp": {
+    "deadline": "2025-11-01",
+    "displayDeadline": "November 1, 2025",
+    "note": "Please confirm your attendance by November 1, 2025 to help us with planning"
+  },
   "faq": [
+    {
+      "question": "When should I RSVP by?",
+      "answer": "Please RSVP by November 1, 2025 to help us with planning and arrangements."
+    },
     {
       "question": "Will food be provided?",
       "answer": "Yes! All meals during the wedding days (20th-22nd Feb) will be provided for all guests."

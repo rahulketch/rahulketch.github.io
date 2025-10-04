@@ -73,19 +73,6 @@ h1, h2, h3, h4 {
     padding: 2rem;
 }
 
-.ornament {
-    font-size: 3rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 1rem 0;
-    animation: rotate 20s linear infinite;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 .couple-names {
     font-size: 4rem;
     margin: 2rem 0;
@@ -243,6 +230,28 @@ section h2 {
     background: white;
 }
 
+.rsvp-banner {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(107, 44, 62, 0.3);
+}
+
+.rsvp-banner h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.rsvp-banner p {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.95;
+}
+
 .welcome-text {
     font-size: 1.2rem;
     text-align: center;
@@ -272,11 +281,6 @@ section h2 {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(92, 64, 51, 0.15);
     border-color: var(--primary-color);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
 .info-card h3 {
@@ -369,11 +373,40 @@ section h2 {
     margin-bottom: 1rem;
     border-left: 4px solid var(--accent-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .event:hover {
     transform: translateX(5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-toggle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.event.expanded .event-toggle {
+    transform: rotate(45deg);
+}
+
+.event-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.event.expanded .event-details {
+    max-height: 500px;
+    margin-top: 1rem;
 }
 
 .event:last-child {
@@ -455,32 +488,38 @@ section h2 {
     color: #666;
 }
 
-.venue-map {
-    position: relative;
+.venue-location {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
 }
 
-.venue-map iframe {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    min-height: 450px;
-}
-
-.map-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
+.location-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
     background: var(--secondary-color);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(92, 64, 51, 0.2);
 }
 
-.map-link:hover {
+.location-link:hover {
     background: var(--burgundy);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(92, 64, 51, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(92, 64, 51, 0.3);
+}
+
+.location-note {
+    margin-top: 1rem;
+    color: #666;
+    font-style: italic;
 }
 
 /* =====================================
@@ -550,11 +589,6 @@ section h2 {
     border: 2px dashed var(--accent-color);
 }
 
-.placeholder-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-}
-
 .outfit-placeholder h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
@@ -617,11 +651,6 @@ section h2 {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     text-align: center;
-}
-
-.trip-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
 }
 
 .trip-announcement h3 {
@@ -762,11 +791,6 @@ section h2 {
     text-align: center;
     color: white;
     box-shadow: 0 10px 40px rgba(37, 211, 102, 0.2);
-}
-
-.whatsapp-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
 }
 
 .whatsapp-section h3 {

@@ -13,7 +13,6 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="ornament top-ornament">❋</div>
             <h1 class="couple-names">
                 <span class="bride-name">Mahathi</span>
                 <span class="ampersand">&</span>
@@ -24,7 +23,6 @@
                 <p class="date-text">20 - 22 February 2026</p>
                 <p class="venue-text">Jenvi Conventions, Hyderabad</p>
             </div>
-            <div class="ornament bottom-ornament">❋</div>
         </div>
         <div class="scroll-indicator">
             <span>↓</span>
@@ -47,6 +45,11 @@
     <!-- Welcome Section -->
     <section class="welcome-section" id="home">
         <div class="container">
+            <div class="rsvp-banner">
+                <h3>Please RSVP by November 1, 2025</h3>
+                <p>Help us plan better by confirming your attendance</p>
+            </div>
+            
             <h2>Welcome to Our Wedding</h2>
             <p class="welcome-text">
                 We are thrilled to invite you to celebrate our wedding in Hyderabad! 
@@ -56,17 +59,14 @@
             </p>
             <div class="info-cards">
                 <div class="info-card">
-                    <div class="card-icon">🏨</div>
                     <h3>Accommodation</h3>
                     <p>Guest accommodation arranged for 20th & 21st night</p>
                 </div>
                 <div class="info-card">
-                    <div class="card-icon">🍽️</div>
                     <h3>Food Included</h3>
                     <p>All meals during wedding days will be provided</p>
                 </div>
                 <div class="info-card">
-                    <div class="card-icon">🎉</div>
                     <h3>Post-Wedding Trip</h3>
                     <p>Trip being organized after the wedding - details soon!</p>
                 </div>
@@ -90,15 +90,29 @@
                     <div class="timeline-content">
                         <h3>Day 1: Mehendi & Sangeet</h3>
                         <div class="event">
-                            <h4>Mehendi Ceremony</h4>
-                            <p class="time">Afternoon</p>
-                            <p>Traditional henna ceremony with beautiful designs</p>
+                            <div class="event-header">
+                                <div>
+                                    <h4>Mehendi Ceremony</h4>
+                                    <p class="time">Afternoon</p>
+                                </div>
+                                <span class="event-toggle">+</span>
+                            </div>
+                            <div class="event-details">
+                                <p>Traditional henna ceremony with beautiful designs. A fun and colorful event where intricate henna patterns are applied to the bride's hands and feet.</p>
+                            </div>
                         </div>
                         <div class="event">
-                            <h4>Sangeet Night</h4>
-                            <p class="time">Evening</p>
-                            <p>Musical night filled with dance, music, and celebrations</p>
-                            <p class="event-note"><strong>Want to perform?</strong> Feel free to prepare performances! Let us know.</p>
+                            <div class="event-header">
+                                <div>
+                                    <h4>Sangeet Night</h4>
+                                    <p class="time">Evening</p>
+                                </div>
+                                <span class="event-toggle">+</span>
+                            </div>
+                            <div class="event-details">
+                                <p>Musical night filled with dance, music, and celebrations. The perfect time to showcase your dancing skills!</p>
+                                <p class="event-note"><strong>Want to perform?</strong> Feel free to prepare performances! Let us know if you'd like to be part of the show.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,15 +126,30 @@
                     <div class="timeline-content">
                         <h3>Day 2: Haldi & Wedding</h3>
                         <div class="event">
-                            <h4>Haldi Ceremony</h4>
-                            <p class="time">Morning</p>
-                            <p>Traditional turmeric ceremony for blessings</p>
-                            <p class="dress-code">👗 Dress Code: Yellow clothes recommended</p>
+                            <div class="event-header">
+                                <div>
+                                    <h4>Haldi Ceremony</h4>
+                                    <p class="time">Morning</p>
+                                </div>
+                                <span class="event-toggle">+</span>
+                            </div>
+                            <div class="event-details">
+                                <p>Traditional turmeric ceremony for blessings. A paste made from turmeric, sandalwood, and other ingredients is applied to the bride and groom to bless them before the wedding.</p>
+                                <p class="dress-code">Dress Code: Yellow clothes recommended (clothes will get stained!)</p>
+                            </div>
                         </div>
                         <div class="event highlight">
-                            <h4>Wedding Ceremony</h4>
-                            <p class="time">Evening</p>
-                            <p>The main wedding ceremony - don't miss it!</p>
+                            <div class="event-header">
+                                <div>
+                                    <h4>Wedding Ceremony</h4>
+                                    <p class="time">Evening</p>
+                                </div>
+                                <span class="event-toggle">+</span>
+                            </div>
+                            <div class="event-details">
+                                <p>The main wedding ceremony - don't miss it! This is when Mahathi and Rahul will tie the knot in a traditional ceremony with family and friends.</p>
+                                <p><strong>Note:</strong> Please be punctual as the ceremony follows traditional auspicious timing.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,9 +163,17 @@
                     <div class="timeline-content">
                         <h3>Day 3: Reception</h3>
                         <div class="event">
-                            <h4>Wedding Reception</h4>
-                            <p class="time">Evening</p>
-                            <p>Celebration dinner and reception</p>
+                            <div class="event-header">
+                                <div>
+                                    <h4>Wedding Reception</h4>
+                                    <p class="time">Evening</p>
+                                </div>
+                                <span class="event-toggle">+</span>
+                            </div>
+                            <div class="event-details">
+                                <p>Celebration dinner and reception. Join us for a grand evening of food, drinks, and festivities as we celebrate the newly married couple!</p>
+                                <p><strong>Dress Code:</strong> Formal/Semi-formal Indian or Western attire</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,19 +199,11 @@
                         20th and 21st February. Details will be shared with you directly.</p>
                     </div>
                 </div>
-                <div class="venue-map">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6976909453677!2d78.39973!3d17.430833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9734d3c3d3d3%3A0x1234567890abcdef!2sJenvi%20Conventions!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                        width="100%" 
-                        height="450" 
-                        style="border:0; border-radius: 15px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <a href="https://maps.app.goo.gl/VSum146jkYTCB6uGA" target="_blank" class="map-link">
-                        📍 Open in Google Maps
+                <div class="venue-location">
+                    <a href="https://maps.app.goo.gl/VSum146jkYTCB6uGA" target="_blank" class="location-link">
+                        <span>View Location on Google Maps</span>
                     </a>
+                    <p class="location-note">Get directions and explore the area</p>
                 </div>
             </div>
         </div>
@@ -186,13 +215,13 @@
             <h2>Travel Information</h2>
             <div class="travel-cards">
                 <div class="travel-card">
-                    <h3>✈️ Flying from Delhi?</h3>
+                    <h3>Flying from Delhi?</h3>
                     <p>Rahul and his family will be flying from Delhi on <strong>19th February 2026</strong>.</p>
                     <p>If you're coming from Delhi or passing through, feel free to coordinate 
                     and travel together! Join our WhatsApp group to connect.</p>
                 </div>
                 <div class="travel-card">
-                    <h3>🌍 International Travelers</h3>
+                    <h3>International Travelers</h3>
                     <p>For friends traveling from outside India, Hyderabad has excellent 
                     international connectivity. The Rajiv Gandhi International Airport (HYD) 
                     is well connected to major cities worldwide.</p>
@@ -211,7 +240,6 @@
             
             <div class="outfits-content">
                 <div class="outfit-placeholder">
-                    <div class="placeholder-icon">👔 👗</div>
                     <h3>Outfit Details Coming Soon!</h3>
                     <p>We'll be sharing dress code recommendations and outfit inspiration for each event. Stay tuned!</p>
                     
@@ -235,7 +263,6 @@
             <p class="section-subtitle">Let's extend the celebration!</p>
             
             <div class="trip-announcement">
-                <div class="trip-icon">🗺️✈️</div>
                 <h3>Adventure Awaits!</h3>
                 <p class="trip-description">
                     We're organizing an exciting trip right after the wedding for those who want to 
@@ -264,6 +291,15 @@
             <p class="section-subtitle">Everything you need to know</p>
             
             <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When should I RSVP by?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Please RSVP by <strong>November 1, 2025</strong> to help us with planning and arrangements.</p>
+                    </div>
+                </div>
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Will food be provided?</h3>
@@ -329,7 +365,6 @@
             
             <div class="contact-card">
                 <div class="whatsapp-section">
-                    <div class="whatsapp-icon">💬</div>
                     <h3>WhatsApp Group</h3>
                     <p>Connect with other guests, coordinate travel plans, and stay updated with all wedding information!</p>
                     <button class="whatsapp-button" id="whatsappBtn">Join WhatsApp Group</button>
@@ -338,7 +373,7 @@
             </div>
 
             <div class="footer-message">
-                <p>We can't wait to celebrate with you! 🎉</p>
+                <p>We can't wait to celebrate with you!</p>
                 <p class="signature">- Mahathi & Rahul</p>
             </div>
         </div>

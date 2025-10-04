@@ -62,8 +62,17 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Add fade-in animation to sections
+// Make events expandable
 document.addEventListener('DOMContentLoaded', function() {
+    // Event expansion functionality
+    const events = document.querySelectorAll('.event');
+    events.forEach(event => {
+        event.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    });
+
+    // Fade-in animation for sections
     const sections = document.querySelectorAll('.welcome-section, .schedule-section, .venue-section, .travel-section, .outfits-section, .trip-section, .faq-section, .contact-section');
     
     sections.forEach(section => {
