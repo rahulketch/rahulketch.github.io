@@ -64,7 +64,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Add fade-in animation to sections
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.welcome-section, .schedule-section, .venue-section, .travel-section, .contact-section');
+    const sections = document.querySelectorAll('.welcome-section, .schedule-section, .venue-section, .travel-section, .outfits-section, .trip-section, .faq-section, .contact-section');
     
     sections.forEach(section => {
         section.style.opacity = '0';

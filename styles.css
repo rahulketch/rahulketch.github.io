@@ -518,10 +518,223 @@ section h2 {
 }
 
 /* =====================================
+   Outfits Section
+   ===================================== */
+.outfits-section {
+    background: white;
+}
+
+.outfits-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.outfit-placeholder {
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px dashed var(--accent-color);
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.outfit-placeholder h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.outfit-placeholder > p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.quick-tips {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: 2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.quick-tips h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.quick-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-tips li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--bg-cream);
+    color: #666;
+    line-height: 1.6;
+}
+
+.quick-tips li:last-child {
+    border-bottom: none;
+}
+
+.quick-tips strong {
+    color: var(--accent-color);
+}
+
+/* =====================================
+   Post-Wedding Trip Section
+   ===================================== */
+.trip-section {
+    background: var(--bg-light);
+}
+
+.trip-announcement {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.trip-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.trip-announcement h3 {
+    color: var(--secondary-color);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.trip-description {
+    font-size: 1.15rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.trip-status {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-color);
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.trip-status p {
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.trip-status p:last-child {
+    margin-bottom: 0;
+}
+
+.trip-status strong {
+    color: var(--secondary-color);
+}
+
+.trip-note {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.trip-interest {
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.1) 0%, rgba(107, 44, 62, 0.05) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.trip-interest p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+/* =====================================
+   FAQ Section
+   ===================================== */
+.faq-section {
+    background: white;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-light);
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 20px rgba(92, 64, 51, 0.1);
+    transform: translateY(-3px);
+}
+
+.faq-question {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.faq-question h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.faq-answer {
+    padding: 1.5rem 2rem;
+}
+
+.faq-answer p {
+    color: #666;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Additional styles for event details */
+.dress-code {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.event-note {
+    color: var(--burgundy) !important;
+    font-style: italic;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--accent-color);
+}
+
+/* =====================================
    Contact Section
    ===================================== */
 .contact-section {
-    background: white;
+    background: var(--bg-light);
 }
 
 .contact-card {

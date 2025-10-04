@@ -30,23 +30,37 @@ Created a complete wedding website with 4 core files:
 - **Feb 22**: Reception (evening)
 
 ### Key Info
-- Accommodation provided for guests on 20th & 21st night
-- Rahul + family flying from Delhi on Feb 19th (guests welcome to join)
-- WhatsApp group planned for trip coordination
+- **Accommodation**: Provided for guests on 20th & 21st night
+- **Food**: All meals during wedding days (20-22 Feb) included
+- **Travel**: Rahul + family flying from Delhi on Feb 19th (guests welcome to join)
+- **WhatsApp Group**: Planned for trip coordination
+- **Post-Wedding Trip**: Being organized (details coming soon)
+
+### Event Specifics
+- **Haldi**: Yellow clothes recommended (may get stained!)
+- **Sangeet**: Guests can prepare performances - let us know!
+- **Mehendi**: Traditional henna ceremony
+- **Wedding**: Main ceremony (don't miss it!)
+- **Reception**: Celebration dinner
 
 ---
 
 ## 🔧 What's Complete
 
 ✅ Full responsive website structure  
-✅ Indian wedding themed design (gold, red, cream colors)  
+✅ Classy, elegant design (earth tones: brown, taupe, burgundy)  
+✅ Couple photo as hero background  
 ✅ All wedding details in centralized JSON file  
 ✅ Interactive features and animations  
 ✅ Mobile-friendly design  
 ✅ Navigation and smooth scrolling  
 ✅ Timeline view of events  
 ✅ Travel information section  
+✅ Outfits/Dress code section (placeholder)  
+✅ Post-wedding trip section  
+✅ FAQ section  
 ✅ WhatsApp group integration placeholder  
+✅ Food & accommodation details  
 
 ---
 
@@ -58,17 +72,19 @@ Created a complete wedding website with 4 core files:
 - [ ] **Add venue map** - Integrate Google Maps embed for Jenvi Conventions
 
 ### Enhancement Ideas
-- [ ] Add couple photos (engagement photos, etc.)
+- [ ] Complete outfit details for each event (currently placeholder)
+- [ ] Finalize post-wedding trip details (destination, dates, itinerary)
 - [ ] Add photo gallery section
 - [ ] Create RSVP form (Google Forms integration or custom)
 - [ ] Add specific event times (once finalized)
-- [ ] Add dress code information for each event
+- [ ] Add detailed dress code/outfit inspiration with photos
 - [ ] Add hotel recommendations for guests
 - [ ] Add things to do in Hyderabad (tourist attractions)
 - [ ] Add contact information for questions
 - [ ] Add gift registry links (if applicable)
 - [ ] Add airport transfer information
 - [ ] Add weather information for February in Hyderabad
+- [ ] Add more couple photos throughout the site
 
 ### Deployment
 - [ ] Choose hosting platform (GitHub Pages / Netlify / Vercel - all free)
@@ -144,27 +160,66 @@ python -m http.server 8000
 
 ## 🎨 Design Highlights
 
-- Traditional Indian wedding color palette
-- Elegant typography (Playfair Display + Poppins)
-- Smooth animations and scroll effects
-- Timeline view for schedule
-- Information cards for key details
-- Prominent WhatsApp integration for guest coordination
+- **Color Palette**: Elegant earth tones (rich brown, taupe, muted gold, burgundy)
+- **Hero Background**: Couple photo with elegant overlay
+- **Typography**: Playfair Display + Poppins
+- **Animations**: Smooth scrolling, fade-ins, hover effects
+- **Layout**: Timeline view for schedule, FAQ cards, trip announcement
+- **Sections**: 
+  - Welcome with info cards
+  - Event timeline
+  - Venue & accommodation
+  - Travel info
+  - Outfits (placeholder)
+  - Post-wedding trip
+  - FAQ
+  - Contact/WhatsApp
 
 ---
 
 ## Questions to Answer Later
 
-1. What are the specific event times? (currently showing "Afternoon", "Morning", "Evening")
-2. What's the exact venue address for Google Maps?
-3. Which hotels to recommend for guests?
-4. Is there a dress code for each event?
-5. Gift registry information?
-6. Contact person for guest questions?
+1. **Event Times**: What are the specific times? (currently showing "Afternoon", "Morning", "Evening")
+2. **Venue Details**: Exact address for Google Maps integration?
+3. **Hotels**: Which hotels to recommend for guests?
+4. **Outfit Details**: Complete dress code with photos/examples for each event
+5. **Post-Wedding Trip**: 
+   - Destination?
+   - Duration (how many days)?
+   - Dates (starting when after 22nd Feb)?
+   - Itinerary?
+   - Cost estimate?
+   - Booking process?
+6. **Gift Registry**: Links or preferences?
+7. **Contact**: Who should guests contact for questions?
+8. **Transportation**: Airport pickup arrangements? Local transport during events?
 
 ---
 
-**Status**: ✅ Basic website complete and functional  
-**Next**: Add WhatsApp link, test, and deploy!
+## 🆕 Latest Updates (Session 2)
+
+### Added:
+- ✅ **Outfits Section**: Placeholder with quick tips for each event
+- ✅ **Post-Wedding Trip Section**: Announcement about trip planning
+- ✅ **FAQ Section**: 6 common questions with answers
+- ✅ **Food Information**: All meals included during wedding days
+- ✅ **Event Details**: 
+  - Yellow clothes for Haldi
+  - Performance opportunities at Sangeet
+- ✅ **Design Overhaul**: Changed from bright yellow to elegant earth tones
+- ✅ **Couple Photo**: Added as hero background
+
+### Color Scheme Update:
+- **Old**: Bright gold/yellow (#D4AF37, #FFD700)
+- **New**: Elegant Taupe (#8B7355), Rich Brown (#5C4033), Muted Gold (#B08968), Deep Burgundy (#6B2C3E)
+
+---
+
+**Status**: ✅ Website complete with all major sections  
+**Next Steps**: 
+1. Add WhatsApp link
+2. Finalize post-wedding trip details
+3. Complete outfit details
+4. Test and deploy!
 
 
