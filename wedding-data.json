@@ -1,0 +1,80 @@
+{
+  "couple": {
+    "bride": "Mahathi",
+    "groom": "Rahul"
+  },
+  "dates": {
+    "start": "2026-02-20",
+    "end": "2026-02-22",
+    "displayRange": "20-22nd Feb 2026"
+  },
+  "venue": {
+    "name": "Jenvi Conventions",
+    "city": "Hyderabad",
+    "fullAddress": "Jenvi Conventions, Hyderabad"
+  },
+  "accommodation": {
+    "provided": true,
+    "nights": ["20th Feb", "21st Feb"],
+    "description": "Accommodation for guests will be arranged for 20th and 21st night"
+  },
+  "schedule": [
+    {
+      "date": "2026-02-20",
+      "displayDate": "20th Feb",
+      "events": [
+        {
+          "name": "Mehendi",
+          "time": "Afternoon",
+          "description": "Traditional henna ceremony"
+        },
+        {
+          "name": "Sangeet",
+          "time": "Evening",
+          "description": "Musical night with dance and celebrations"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-21",
+      "displayDate": "21st Feb",
+      "events": [
+        {
+          "name": "Haldi",
+          "time": "Morning",
+          "description": "Traditional turmeric ceremony"
+        },
+        {
+          "name": "Wedding Ceremony",
+          "time": "Evening",
+          "description": "The main wedding ceremony"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-22",
+      "displayDate": "22nd Feb",
+      "events": [
+        {
+          "name": "Reception",
+          "time": "Evening",
+          "description": "Celebration dinner and reception"
+        }
+      ]
+    }
+  ],
+  "travel": {
+    "groomFamily": {
+      "from": "Delhi",
+      "arrivalDate": "19th Feb 2026",
+      "note": "Rahul + Family will be flying from Delhi on 19th. People are welcome to join them!"
+    }
+  },
+  "contact": {
+    "whatsappGroup": {
+      "description": "Join our WhatsApp group to connect with other guests and plan trips together!",
+      "link": "TO_BE_ADDED"
+    }
+  }
+}
+

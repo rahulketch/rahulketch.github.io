@@ -3,412 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahathi & Rahul - Wedding</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #faf9f7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4c5b9" width="100%" height="100%"/><circle fill="%23f5f0eb" cx="200" cy="150" r="80" opacity="0.3"/><circle fill="%23f5f0eb" cx="800" cy="300" r="120" opacity="0.2"/><circle fill="%23f5f0eb" cx="1000" cy="100" r="60" opacity="0.4"/></svg>');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-content .date {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            letter-spacing: 2px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #d4c5b9;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover {
-            background-color: #c2b3a6;
-            transform: translateY(-2px);
-        }
-
-        /* Navigation */
-        nav {
-            background-color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #d4c5b9;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        /* Our Story */
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .story-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .story-image {
-            background: linear-gradient(45deg, #d4c5b9, #e8ddd4);
-            height: 400px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        /* Wedding Details */
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .detail-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .detail-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #d4c5b9;
-        }
-
-        .detail-card p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* RSVP Section */
-        #rsvp {
-            background-color: #f5f0eb;
-        }
-
-        .rsvp-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: #d4c5b9;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #c2b3a6;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-content .date {
-                font-size: 1.2rem;
-            }
-
-            .story-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <title>Mahathi & Rahul - Wedding Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
-            <h1>Mahathi & Rahul</h1>
-            <p class="date">June 15, 2024</p>
-            <a href="#rsvp" class="cta-button">RSVP Now</a>
+            <div class="ornament top-ornament">❋</div>
+            <h1 class="couple-names">
+                <span class="bride-name">Mahathi</span>
+                <span class="ampersand">&</span>
+                <span class="groom-name">Rahul</span>
+            </h1>
+            <p class="tagline">are getting married!</p>
+            <div class="wedding-date">
+                <p class="date-text">20 - 22 February 2026</p>
+                <p class="venue-text">Jenvi Conventions, Hyderabad</p>
+            </div>
+            <div class="ornament bottom-ornament">❋</div>
         </div>
-    </header>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#details">Wedding Details</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
-                <li><a href="#registry">Registry</a></li>
-            </ul>
-        </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#travel">Travel</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <section id="story">
+    <!-- Welcome Section -->
+    <section class="welcome-section" id="home">
         <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div class="story-grid">
-                <div class="story-text">
-                    <p>Mahathi and Rahul first met at a coffee shop in downtown Portland on a rainy Tuesday morning. What started as a chance encounter over spilled coffee quickly blossomed into something beautiful.</p>
-                    
-                    <p>After three wonderful years together, filled with adventures, laughter, and countless memories, Rahul proposed during a sunset hike at their favorite trail. Mahathi said yes, and now they're excited to celebrate their love with family and friends.</p>
-                    
-                    <p>Join us as we begin this new chapter of our lives together. Your presence would make our special day even more meaningful.</p>
+            <h2>Welcome to Our Wedding</h2>
+            <p class="welcome-text">
+                We are thrilled to invite you to celebrate our wedding in Hyderabad! 
+                As many of you are traveling from outside the country, we've prepared 
+                this website to help you plan your trip and stay informed about all 
+                the festivities.
+            </p>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">🏨</div>
+                    <h3>Accommodation</h3>
+                    <p>Guest accommodation arranged for 20th & 21st night</p>
                 </div>
-                <div class="story-image">
-                    <p>💕 Our Journey Together 💕</p>
+                <div class="info-card">
+                    <div class="card-icon">✈️</div>
+                    <h3>Travel Together</h3>
+                    <p>Join Rahul's family flying from Delhi on 19th Feb</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">💬</div>
+                    <h3>Stay Connected</h3>
+                    <p>Join our WhatsApp group to plan with other guests</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="details">
+    <!-- Schedule Section -->
+    <section class="schedule-section" id="schedule">
         <div class="container">
-            <h2 class="section-title">Wedding Details</h2>
-            <div class="details-grid">
-                <div class="detail-card">
-                    <h3>Ceremony</h3>
-                    <p><strong>Date:</strong> June 15, 2024</p>
-                    <p><strong>Time:</strong> 4:00 PM</p>
-                    <p><strong>Location:</strong> Rose Garden Pavilion</p>
-                    <p>123 Garden Lane, Portland, OR</p>
+            <h2>Wedding Schedule</h2>
+            <p class="section-subtitle">Three days of celebration</p>
+            
+            <div class="timeline">
+                <!-- Day 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">20</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Day 1: Mehendi & Sangeet</h3>
+                        <div class="event">
+                            <h4>Mehendi Ceremony</h4>
+                            <p class="time">Afternoon</p>
+                            <p>Traditional henna ceremony with beautiful designs</p>
+                        </div>
+                        <div class="event">
+                            <h4>Sangeet Night</h4>
+                            <p class="time">Evening</p>
+                            <p>Musical night filled with dance, music, and celebrations</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="detail-card">
-                    <h3>Reception</h3>
-                    <p><strong>Time:</strong> 6:00 PM - 11:00 PM</p>
-                    <p><strong>Location:</strong> The Grand Ballroom</p>
-                    <p>456 Celebration Ave, Portland, OR</p>
-                    <p>Dinner, dancing, and celebration!</p>
+
+                <!-- Day 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">21</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Day 2: Haldi & Wedding</h3>
+                        <div class="event">
+                            <h4>Haldi Ceremony</h4>
+                            <p class="time">Morning</p>
+                            <p>Traditional turmeric ceremony for blessings</p>
+                        </div>
+                        <div class="event highlight">
+                            <h4>Wedding Ceremony</h4>
+                            <p class="time">Evening</p>
+                            <p>The main wedding ceremony - don't miss it!</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="detail-card">
-                    <h3>Dress Code</h3>
-                    <p><strong>Semi-Formal</strong></p>
-                    <p>Think garden party chic! Ladies: sundresses or cocktail dresses. Gentlemen: dress shirt with slacks, tie optional.</p>
-                </div>
-                
-                <div class="detail-card">
-                    <h3>Accommodations</h3>
-                    <p><strong>Hotel Block:</strong> Portland Suites</p>
-                    <p>Special rate: $120/night</p>
-                    <p>Booking code: MAHATHIRAHUL2024</p>
-                    <p>Book by May 15, 2024</p>
+
+                <!-- Day 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">22</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Day 3: Reception</h3>
+                        <div class="event">
+                            <h4>Wedding Reception</h4>
+                            <p class="time">Evening</p>
+                            <p>Celebration dinner and reception</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="rsvp">
+    <!-- Venue Section -->
+    <section class="venue-section" id="venue">
         <div class="container">
-            <h2 class="section-title">RSVP</h2>
-            <div class="rsvp-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name(s)</label>
-                        <input type="text" id="name" name="name" required>
+            <h2>Venue & Accommodation</h2>
+            <div class="venue-content">
+                <div class="venue-info">
+                    <h3>Jenvi Conventions</h3>
+                    <p class="address">Hyderabad, India</p>
+                    <p class="venue-description">
+                        All wedding events will be held at Jenvi Conventions, a beautiful 
+                        venue in Hyderabad perfect for our celebrations.
+                    </p>
+                    <div class="accommodation-info">
+                        <h4>Guest Accommodation</h4>
+                        <p>We've arranged accommodation for all our guests for the nights of 
+                        20th and 21st February. Details will be shared with you directly.</p>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="attendance">Will you be attending?</label>
-                        <select id="attendance" name="attendance" required>
-                            <option value="">Please select</option>
-                            <option value="yes">Yes, I'll be there!</option>
-                            <option value="no">Sorry, can't make it</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="guests">Number of guests (including yourself)</label>
-                        <select id="guests" name="guests">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="dietary">Dietary restrictions or allergies</label>
-                        <textarea id="dietary" name="dietary" rows="3" placeholder="Please let us know about any dietary needs..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Special message for the couple</label>
-                        <textarea id="message" name="message" rows="3" placeholder="We'd love to hear from you!"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Submit RSVP</button>
-                </form>
+                </div>
+                <div class="map-placeholder">
+                    <p>📍 Map and directions coming soon</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="registry">
+    <!-- Travel Section -->
+    <section class="travel-section" id="travel">
         <div class="container">
-            <h2 class="section-title">Gift Registry</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Your presence is the greatest gift, but if you'd like to help us start our new life together, we've registered at a few of our favorite places.</p>
-                
-                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                    <a href="#" class="cta-button">Williams Sonoma</a>
-                    <a href="#" class="cta-button">Target</a>
-                    <a href="#" class="cta-button">Amazon</a>
+            <h2>Travel Information</h2>
+            <div class="travel-cards">
+                <div class="travel-card">
+                    <h3>✈️ Flying from Delhi?</h3>
+                    <p>Rahul and his family will be flying from Delhi on <strong>19th February 2026</strong>.</p>
+                    <p>If you're coming from Delhi or passing through, feel free to coordinate 
+                    and travel together! Join our WhatsApp group to connect.</p>
                 </div>
+                <div class="travel-card">
+                    <h3>🌍 International Travelers</h3>
+                    <p>For friends traveling from outside India, Hyderabad has excellent 
+                    international connectivity. The Rajiv Gandhi International Airport (HYD) 
+                    is well connected to major cities worldwide.</p>
+                    <p>We recommend arriving on or before 19th February to settle in and rest 
+                    before the festivities begin!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            <p class="section-subtitle">Join our community and plan together</p>
+            
+            <div class="contact-card">
+                <div class="whatsapp-section">
+                    <div class="whatsapp-icon">💬</div>
+                    <h3>WhatsApp Group</h3>
+                    <p>Connect with other guests, coordinate travel plans, and stay updated with all wedding information!</p>
+                    <button class="whatsapp-button" id="whatsappBtn">Join WhatsApp Group</button>
+                    <p class="note">The link will be shared soon</p>
+                </div>
+            </div>
+
+            <div class="footer-message">
+                <p>We can't wait to celebrate with you! 🎉</p>
+                <p class="signature">- Mahathi & Rahul</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Mahathi & Rahul Wedding. Made with ❤️</p>
-        </div>
+        <p>&copy; 2026 Mahathi & Rahul Wedding</p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // RSVP form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your RSVP! We\'ll be in touch soon.');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
