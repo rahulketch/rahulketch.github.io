@@ -865,15 +865,16 @@ footer {
 .home-page {
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-cream) 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+}
+
+.home-page .greeting-card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .greeting-card {
     max-width: 800px;
-    width: 100%;
+    width: calc(100% - 4rem);
     margin: 0 auto;
     background: white;
     border-radius: 30px;
@@ -897,27 +898,10 @@ footer {
     padding: 4rem 3rem;
     text-align: center;
     position: relative;
-}
-
-.ornament {
-    font-size: 3rem;
-    color: var(--accent-color);
-    opacity: 0.6;
-    margin: 1rem 0;
-    animation: sparkle 3s ease-in-out infinite;
-}
-
-@keyframes sparkle {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
-}
-
-.top-ornament {
-    margin-bottom: 2rem;
-}
-
-.bottom-ornament {
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .invitation-text {
@@ -927,6 +911,8 @@ footer {
     text-transform: uppercase;
     margin-bottom: 2rem;
     font-weight: 500;
+    width: 100%;
+    text-align: center;
 }
 
 .greeting-card .couple-names {
@@ -934,11 +920,13 @@ footer {
     color: var(--secondary-color);
     margin: 2rem 0;
     text-shadow: none;
+    line-height: 1.2;
 }
 
 .greeting-card .bride-name,
 .greeting-card .groom-name {
     display: block;
+    color: var(--secondary-color);
 }
 
 .greeting-card .ampersand {
@@ -958,6 +946,8 @@ footer {
     padding: 2rem;
     background: var(--bg-light);
     border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .detail-item {
@@ -1007,6 +997,8 @@ footer {
     background: linear-gradient(135deg, rgba(176, 137, 104, 0.1) 0%, rgba(107, 44, 62, 0.05) 100%);
     border-radius: 15px;
     border-left: 4px solid var(--burgundy);
+    width: 100%;
+    max-width: 600px;
 }
 
 .rsvp-note p {
@@ -1016,37 +1008,12 @@ footer {
     font-size: 1.05rem;
 }
 
-.navigation-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 3rem 0;
-}
-
-.nav-link {
-    padding: 1rem 2rem;
-    background: var(--bg-light);
-    color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: 15px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--accent-color);
-}
-
-.nav-link:hover {
-    background: var(--secondary-color);
-    color: white;
-    transform: translateX(10px);
-    box-shadow: 0 5px 20px rgba(92, 64, 51, 0.2);
-    border-left-color: white;
-}
-
 .greeting-card .footer-message {
     margin-top: 3rem;
     padding: 2rem 0 0;
     border-top: 2px solid var(--bg-cream);
+    width: 100%;
+    max-width: 600px;
 }
 
 .greeting-card .footer-message p {
@@ -1151,6 +1118,10 @@ footer {
     .detail-divider {
         display: none;
     }
+    
+    .greeting-card {
+        width: calc(100% - 2rem);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1170,9 +1141,10 @@ footer {
         font-size: 1.1rem;
     }
     
-    .nav-link {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
+    .greeting-card {
+        width: calc(100% - 1rem);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
