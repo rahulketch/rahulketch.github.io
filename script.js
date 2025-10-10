@@ -107,6 +107,27 @@ window.addEventListener('scroll', function() {
     lastScroll = currentScroll;
 });
 
+// Hero image fade effect on scroll
+window.addEventListener('scroll', function() {
+    const heroSection = document.querySelector('.hero-image-section');
+    const heroImage = document.querySelector('.hero-full-image');
+    
+    if (heroSection && heroImage) {
+        const scrollPosition = window.pageYOffset;
+        const heroHeight = heroSection.offsetHeight;
+        
+        // Calculate opacity (fade from 1 to 0.2 as user scrolls)
+        // Opacity goes from 1 to 0.2 as scroll goes from 0 to heroHeight
+        const minOpacity = 0.2;
+        const maxOpacity = 1;
+        const opacityRange = maxOpacity - minOpacity;
+        const opacity = Math.max(minOpacity, maxOpacity - (scrollPosition / heroHeight) * opacityRange);
+        
+        // Apply opacity
+        heroImage.style.opacity = opacity;
+    }
+});
+
 // Add countdown timer functionality (optional - can be enabled later)
 function updateCountdown() {
     const weddingDate = new Date('2026-02-21T18:00:00').getTime();
