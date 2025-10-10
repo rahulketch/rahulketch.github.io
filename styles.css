@@ -232,161 +232,116 @@ section h2 {
     background: white;
 }
 
-/* Details Page Styling */
-.details-page-section {
-    background: var(--bg-light);
-    padding: 4rem 0;
+/* New Details Page - Clean & Compact Design */
+.details-new-section {
+    background: white;
+    padding: 3rem 0 4rem;
     min-height: calc(100vh - 200px);
 }
 
-.page-header {
+.details-main-title {
     text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2.5rem;
+}
+
+.details-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.detail-item {
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.page-header h2 {
-    font-size: 2.2rem;
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.detail-question {
+    font-size: 1.4rem;
     color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
 }
 
-.page-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-}
-
-.details-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.detail-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.2rem 2rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.detail-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.detail-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.detail-card:hover::before {
-    transform: scaleX(1);
-}
-
-.card-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.detail-card h3 {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.card-content {
+.detail-answer {
     color: var(--text-dark);
-    text-align: center;
+    line-height: 1.6;
 }
 
-.card-content p {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-    font-size: 0.95rem;
+.detail-answer p {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
 }
 
-.venue-name {
+.venue-title {
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--secondary-color);
-    margin-bottom: 0.3rem !important;
+    margin-bottom: 0.4rem !important;
 }
 
-.venue-address {
+.venue-addr {
     color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem !important;
-    line-height: 1.5;
+    margin-bottom: 0.8rem !important;
 }
 
-.airport-name {
+.airport-title {
     font-weight: 600;
     color: var(--secondary-color);
-    margin-bottom: 0.3rem !important;
     font-size: 1.05rem;
 }
 
-.transport-info {
+.transport-note {
     background: var(--bg-cream);
-    padding: 0.7rem;
-    border-radius: 8px;
-    margin-top: 0.5rem !important;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 0.6rem !important;
     margin-bottom: 0 !important;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    text-align: left;
 }
 
-.note-text {
-    font-size: 0.85rem;
+.sub-note {
+    font-size: 0.9rem;
     color: #777;
     font-style: italic;
-    margin-top: 0.3rem !important;
+    margin-top: 0.4rem !important;
 }
 
-.detail-button {
+.maps-link {
     display: inline-block;
     margin-top: 0.5rem;
-    padding: 0.6rem 1.3rem;
+    padding: 0.5rem 1.2rem;
     background: var(--secondary-color);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-weight: 500;
     font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
-.detail-button:hover {
+.maps-link:hover {
     background: var(--burgundy);
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-    .page-header h2 {
+    .details-main-title {
         font-size: 2rem;
     }
     
-    .details-grid {
-        margin-top: 2rem;
+    .detail-question {
+        font-size: 1.2rem;
+    }
+    
+    .details-new-section {
+        padding: 2rem 0 3rem;
     }
 }
 
