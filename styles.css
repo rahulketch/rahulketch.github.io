@@ -1023,7 +1023,7 @@ footer {
 }
 
 .home-page .greeting-card {
-    margin-top: calc(100vh + 2rem);
+    margin-top: 100vh;
     margin-bottom: 2rem;
 }
 
@@ -1054,7 +1054,7 @@ footer {
 }
 
 .card-content {
-    padding: 4rem 3rem;
+    padding: 2.5rem 2rem;
     text-align: center;
     position: relative;
     display: flex;
@@ -1075,9 +1075,9 @@ footer {
 }
 
 .greeting-card .couple-names {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--secondary-color);
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     text-shadow: none;
     line-height: 1.2;
 }
@@ -1101,8 +1101,8 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin: 3rem 0;
-    padding: 2rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
     background: var(--bg-light);
     border-radius: 20px;
     width: 100%;
@@ -1151,8 +1151,8 @@ footer {
 }
 
 .rsvp-note {
-    margin: 2rem 0;
-    padding: 1rem 2rem;
+    margin: 1.5rem 0;
+    padding: 0.8rem 1.5rem;
     background: linear-gradient(135deg, rgba(176, 137, 104, 0.1) 0%, rgba(107, 44, 62, 0.05) 100%);
     border-radius: 15px;
     border-left: 4px solid var(--burgundy);
@@ -1168,8 +1168,8 @@ footer {
 }
 
 .greeting-card .footer-message {
-    margin-top: 3rem;
-    padding: 2rem 0 0;
+    margin-top: 2rem;
+    padding: 1.5rem 0 0;
     border-top: 2px solid var(--bg-cream);
     width: 100%;
     max-width: 600px;
