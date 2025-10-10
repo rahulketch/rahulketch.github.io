@@ -2,7 +2,15 @@
   "faqs": [
     {
       "question": "Will you hate me if I don't come to the wedding?",
-      "answer": "Of course not! We totally understand and we love you."
+      "answer": "Not at all! We completely understand - it’s not an easy trip. We’ll miss you, but we’ll still love you just the same ❤️ "
+    },
+    {
+        "question": "What should we expect from the food?",
+        "answer": "There will be vegetarian food and non-alcoholic drinks for the meals during the wedding days."
+    },
+    {
+        "question": "Is there a dress code for the events?",
+        "answer": "TBA"
     }
   ]
 }
