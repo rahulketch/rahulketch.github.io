@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Fade-in animation for sections
-    const sections = document.querySelectorAll('.welcome-section, .schedule-section, .venue-section, .travel-section, .outfits-section, .trip-section, .faq-section, .contact-section');
+    const sections = document.querySelectorAll('.welcome-section, .schedule-section, .venue-section, .travel-section, .trip-section, .faq-section, .contact-section');
     
     sections.forEach(section => {
         section.style.opacity = '0';
