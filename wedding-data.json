@@ -94,11 +94,6 @@
     "description": "Dress code and outfit details coming soon!",
     "events": []
   },
-  "postWeddingTrip": {
-    "planned": true,
-    "status": "Details to be announced",
-    "description": "We're planning a trip right after the wedding! More details will be shared soon. Stay tuned!"
-  },
   "rsvp": {
     "deadline": "2025-11-01",
     "displayDeadline": "November 1, 2025",
@@ -124,10 +119,6 @@
     {
       "question": "Can I perform at the Sangeet?",
       "answer": "Absolutely! We'd love to see performances from our friends and family. Please let us know if you'd like to perform so we can coordinate."
-    },
-    {
-      "question": "Are you planning any trips after the wedding?",
-      "answer": "Yes! We're organizing a post-wedding trip. Details are not final yet, but we'll share information soon."
     },
     {
       "question": "How do I get to the venue?",
