@@ -11,14 +11,14 @@
   "venue": {
     "name": "Jenvi Conventions",
     "city": "Hyderabad",
-    "fullAddress": "Jenvi Conventions, Hyderabad",
-    "googleMapsLink": "https://maps.app.goo.gl/VSum146jkYTCB6uGA",
+    "fullAddress": "SY NO 441, DEVAR YAMZAL Kompally-Tumkunta, Road, Hyderabad, Telangana 500078, India",
+    "googleMapsLink": "https://maps.app.goo.gl/ocPYmFavSFUXvknX9",
     "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6976909453677!2d78.39973!3d17.430833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9734d3c3d3d3%3A0x1234567890abcdef!2sJenvi%20Conventions!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
   },
   "accommodation": {
     "provided": true,
     "nights": ["20th Feb", "21st Feb"],
-    "description": "Accommodation for guests will be arranged for 20th and 21st night"
+    "description": "Accommodation will be arranged near the venue for guests coming from outside Hyderabad for 20th and 21st night. For people staying longer in Hyderabad, we will share some suggested places. Details to be shared."
   },
   "food": {
     "included": true,

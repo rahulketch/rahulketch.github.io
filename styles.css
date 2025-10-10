@@ -232,6 +232,150 @@ section h2 {
     background: white;
 }
 
+/* Details Page Styling */
+.details-page-section {
+    background: var(--bg-light);
+    padding: 4rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.detail-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.detail-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.detail-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-content {
+    color: var(--text-dark);
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.venue-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem !important;
+}
+
+.venue-address {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.airport-name {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem !important;
+}
+
+.transport-info {
+    background: var(--bg-cream);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem !important;
+    font-size: 0.95rem;
+}
+
+.note-text {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 1rem !important;
+}
+
+.detail-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.detail-button:hover {
+    background: var(--burgundy);
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h2 {
+        font-size: 2rem;
+    }
+}
+
 .rsvp-banner {
     background: linear-gradient(135deg, var(--burgundy) 0%, var(--secondary-color) 100%);
     color: white;
@@ -502,6 +646,25 @@ section h2 {
     background: var(--burgundy);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(92, 64, 51, 0.3);
+}
+
+.maps-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.maps-button:hover {
+    background: var(--burgundy);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(92, 64, 51, 0.2);
 }
 
 .location-note {
