@@ -28,78 +28,9 @@
             <h2>Frequently Asked Questions</h2>
             <p class="section-subtitle">Everything you need to know</p>
             
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>When should I RSVP by?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Please RSVP by <strong>November 1, 2025</strong> to help us with planning and arrangements.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Will food be provided?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! All meals during the wedding days (20th-22nd Feb) will be provided for all guests.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Is accommodation provided?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, accommodation will be arranged for all guests for the nights of 20th and 21st February.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What should I wear to the Haldi ceremony?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yellow clothes are recommended for the Haldi ceremony as it's a traditional turmeric ceremony and your clothes might get stained with turmeric!</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can I perform at the Sangeet?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! We'd love to see performances from our friends and family. Please let us know if you'd like to perform so we can coordinate the schedule.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are you planning any trips after the wedding?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! We're organizing a post-wedding trip. Details are not final yet, but we'll share information soon. Check the "Post-Wedding Trip" section above!</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How do I get to the venue?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Jenvi Conventions is located in Hyderabad. Detailed directions and transportation information will be shared with you directly.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Will you hate me if I don't come to the wedding?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Of course not! We totally understand and we love you.</p>
-                    </div>
-                </div>
+            <div class="faq-list" id="faqContainer">
+                <!-- FAQs will be loaded dynamically from faq-data.json -->
+                <p style="text-align: center; color: #666;">Loading FAQs...</p>
             </div>
         </div>
     </section>
@@ -109,5 +40,41 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Load FAQs from faq-data.json
+        async function loadFAQs() {
+            try {
+                const response = await fetch('faq-data.json');
+                const data = await response.json();
+                const faqContainer = document.getElementById('faqContainer');
+                
+                // Clear loading message
+                faqContainer.innerHTML = '';
+                
+                // Generate FAQ items
+                data.faqs.forEach(faq => {
+                    const faqItem = document.createElement('div');
+                    faqItem.className = 'faq-item';
+                    
+                    faqItem.innerHTML = `
+                        <div class="faq-question">
+                            <h3>${faq.question}</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>${faq.answer}</p>
+                        </div>
+                    `;
+                    
+                    faqContainer.appendChild(faqItem);
+                });
+            } catch (error) {
+                console.error('Error loading FAQs:', error);
+                document.getElementById('faqContainer').innerHTML = '<p style="text-align: center; color: red;">Error loading FAQs. Please refresh the page.</p>';
+            }
+        }
+        
+        // Load FAQs when page loads
+        document.addEventListener('DOMContentLoaded', loadFAQs);
+    </script>
 </body>
 </html>
