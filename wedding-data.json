@@ -69,6 +69,18 @@
           "description": "Celebration dinner and reception"
         }
       ]
+    },
+    {
+      "date": "2026-03-01",
+      "displayDate": "1st March",
+      "events": [
+        {
+          "name": "Reception",
+          "time": "Evening",
+          "description": "Reception in Delhi",
+          "location": "Delhi"
+        }
+      ]
     }
   ],
   "travel": {
