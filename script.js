@@ -111,6 +111,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     const heroSection = document.querySelector('.hero-image-section');
     const heroImage = document.querySelector('.hero-full-image');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
     
     if (heroSection && heroImage) {
         const scrollPosition = window.pageYOffset;
@@ -125,6 +126,17 @@ window.addEventListener('scroll', function() {
         
         // Apply opacity
         heroImage.style.opacity = opacity;
+        
+        // Hide scroll indicator when user starts scrolling
+        if (scrollIndicator) {
+            if (scrollPosition > 50) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.pointerEvents = 'auto';
+            }
+        }
     }
 });
 
