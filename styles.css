@@ -1,6 +1,8 @@
 /* =====================================
    Global Styles & Variables
    ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&family=Merriweather:wght@400;700&family=Lato:wght@300;400;700&family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;600&family=Bebas+Neue&family=Open+Sans:wght@300;400;600&family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&family=Abril+Fatface&family=Karla:wght@300;400;600&family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;600&display=swap');
+
 :root {
     --primary-color: #8B7355; /* Elegant Taupe */
     --secondary-color: #5C4033; /* Rich Brown */
@@ -12,6 +14,15 @@
     --bg-cream: #F5F1ED;
     --gradient-primary: linear-gradient(135deg, rgba(176, 137, 104, 0.15) 0%, rgba(139, 115, 85, 0.1) 100%);
     --gradient-elegant: linear-gradient(135deg, #5C4033 0%, #6B2C3E 100%);
+    
+    /* Design System Variables */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Poppins', sans-serif;
+    --border-radius: 30px;
+    --border-radius-sm: 15px;
+    --card-shadow: 0 20px 80px rgba(92, 64, 51, 0.15);
+    --card-padding: 4rem 3rem;
+    --letter-spacing: 0.5px;
 }
 
 * {
@@ -21,11 +32,13 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--bg-light);
     overflow-x: hidden;
+    letter-spacing: var(--letter-spacing);
+    transition: all 0.3s ease;
 }
 
 html {
@@ -141,8 +154,9 @@ html {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--heading-font);
     font-weight: 700;
+    transition: all 0.3s ease;
 }
 
 /* =====================================
@@ -569,9 +583,10 @@ section h2 {
 .timeline-content {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: var(--border-radius-sm);
     flex: 1;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
 }
 
 .timeline-content h3 {
@@ -1045,12 +1060,13 @@ footer {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-radius: 30px;
-    box-shadow: 0 20px 80px rgba(92, 64, 51, 0.15);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
     overflow: hidden;
     animation: fadeIn 1s ease-out;
     position: relative;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 @keyframes fadeIn {
@@ -1065,13 +1081,14 @@ footer {
 }
 
 .card-content {
-    padding: 2.5rem 2rem;
+    padding: var(--card-padding);
     text-align: center;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    transition: all 0.3s ease;
 }
 
 .invitation-text {
@@ -1115,9 +1132,10 @@ footer {
     margin: 2rem 0;
     padding: 1.5rem;
     background: var(--bg-light);
-    border-radius: 20px;
+    border-radius: var(--border-radius-sm);
     width: 100%;
     max-width: 600px;
+    transition: all 0.3s ease;
 }
 
 .detail-item {
@@ -1165,10 +1183,11 @@ footer {
     margin: 1.5rem 0;
     padding: 0.8rem 1.5rem;
     background: linear-gradient(135deg, rgba(176, 137, 104, 0.1) 0%, rgba(107, 44, 62, 0.05) 100%);
-    border-radius: 15px;
+    border-radius: var(--border-radius-sm);
     border-left: 4px solid var(--burgundy);
     width: 100%;
     max-width: 600px;
+    transition: all 0.3s ease;
 }
 
 .rsvp-note p {
@@ -1325,6 +1344,126 @@ footer {
         width: calc(100% - 1rem);
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+}
+
+/* =====================================
+   Theme Switcher
+   ===================================== */
+.theme-switcher {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.theme-panel {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.theme-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.theme-panel h4 {
+    margin: 0 0 1rem 0;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.theme-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 2px solid transparent;
+    background: var(--bg-light);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.theme-btn:hover {
+    background: var(--bg-cream);
+    transform: translateX(5px);
+}
+
+.theme-btn.active {
+    border-color: var(--primary-color);
+    background: var(--bg-cream);
+}
+
+.theme-preview {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-name {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .theme-switcher {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .theme-panel {
+        bottom: 65px;
+        right: -50px;
+        min-width: 220px;
     }
 }
 
