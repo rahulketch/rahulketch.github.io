@@ -944,10 +944,10 @@ section h2 {
 }
 
 /* =====================================
-   FAQ Section
+   FAQ Section - Accordion Style
    ===================================== */
 .faq-section {
-    background: white;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
 }
 
 .faq-list {
@@ -956,40 +956,61 @@ section h2 {
 }
 
 .faq-item {
-    background: var(--bg-light);
-    margin-bottom: 1.5rem;
-    border-radius: 15px;
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
 }
 
 .faq-item:hover {
-    box-shadow: 0 5px 20px rgba(92, 64, 51, 0.1);
+    box-shadow: 0 8px 25px rgba(92, 64, 51, 0.15);
     transform: translateY(-3px);
 }
 
 .faq-question {
-    background: white;
-    padding: 1.5rem 2rem;
-    border-left: 4px solid var(--accent-color);
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.08) 0%, rgba(107, 44, 62, 0.03) 100%);
+    padding: 1.25rem 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .faq-question h3 {
     color: var(--secondary-color);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0;
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .faq-answer {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem 1.25rem 1.5rem;
+    background: white;
+}
+
+.faq-answer-content {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--bg-light);
 }
 
 .faq-answer p {
     color: #666;
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
+    font-size: 1rem;
+}
+
+.faq-answer a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.faq-answer a:hover {
+    border-bottom-color: var(--accent-color);
 }
 
 /* Additional styles for event details */
@@ -1353,6 +1374,22 @@ footer {
     
     .info-cards {
         grid-template-columns: 1fr;
+    }
+    
+    .faq-question {
+        padding: 1rem 1.25rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.05rem;
+    }
+    
+    .faq-answer {
+        padding: 0.75rem 1.25rem 1rem 1.25rem;
+    }
+    
+    .faq-answer-content {
+        padding-top: 0.5rem;
     }
 }
 
