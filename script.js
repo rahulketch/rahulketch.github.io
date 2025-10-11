@@ -62,16 +62,26 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Make events expandable
+// Animation setup and tab functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Event expansion functionality
-    const events = document.querySelectorAll('.event');
-    events.forEach(event => {
-        event.addEventListener('click', function() {
-            this.classList.toggle('expanded');
+    // Tab switching functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetDay = this.getAttribute('data-day');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            document.getElementById(targetDay).classList.add('active');
         });
     });
-
+    
     // Fade-in animation for sections
     const sections = document.querySelectorAll('.welcome-section, .schedule-section, .venue-section, .travel-section, .trip-section, .faq-section, .contact-section');
     
@@ -83,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add animation to cards
-    const cards = document.querySelectorAll('.info-card, .timeline-item, .travel-card');
+    const cards = document.querySelectorAll('.info-card, .travel-card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';

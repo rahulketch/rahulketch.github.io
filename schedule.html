@@ -18,124 +18,110 @@
     <section class="schedule-section" id="schedule">
         <div class="container">
             <h2>Wedding Schedule</h2>
+            <p class="section-subtitle">Select a day to view the schedule</p>
             
-            <div class="timeline">
-                <!-- Day 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span class="day">20</span>
-                        <span class="month">Feb</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Day 1: Mehendi & Sangeet</h3>
-                        <div class="event">
-                            <div class="event-header">
-                                <div>
-                                    <h4>Mehendi Ceremony</h4>
-                                    <p class="time">Afternoon</p>
-                                </div>
-                                <span class="event-toggle">+</span>
-                            </div>
-                            <div class="event-details">
-                                <p>Traditional henna ceremony with beautiful designs. A fun and colorful event where intricate henna patterns are applied to the bride's hands and feet.</p>
-                            </div>
-                        </div>
-                        <div class="event">
-                            <div class="event-header">
-                                <div>
-                                    <h4>Sangeet Night</h4>
-                                    <p class="time">Evening</p>
-                                </div>
-                                <span class="event-toggle">+</span>
-                            </div>
-                            <div class="event-details">
-                                <p>Musical night filled with dance, music, and celebrations. The perfect time to showcase your dancing skills!</p>
-                                <p class="event-note"><strong>Want to perform?</strong> Feel free to prepare performances! Let us know if you'd like to be part of the show.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="schedule-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-day="day1">
+                        <span class="tab-date">Feb 20</span>
+                        <span class="tab-title">Mehendi & Sangeet</span>
+                    </button>
+                    <button class="tab-btn" data-day="day2">
+                        <span class="tab-date">Feb 21</span>
+                        <span class="tab-title">Haldi & Wedding</span>
+                    </button>
+                    <button class="tab-btn" data-day="day3">
+                        <span class="tab-date">Feb 22</span>
+                        <span class="tab-title">Reception</span>
+                    </button>
                 </div>
-
-                <!-- Day 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span class="day">21</span>
-                        <span class="month">Feb</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Day 2: Haldi & Wedding</h3>
-                        <div class="event">
-                            <div class="event-header">
-                                <div>
-                                    <h4>Haldi Ceremony</h4>
-                                    <p class="time">Morning</p>
-                                </div>
-                                <span class="event-toggle">+</span>
-                            </div>
-                            <div class="event-details">
-                                <p>Traditional turmeric ceremony for blessings. A paste made from turmeric, sandalwood, and other ingredients is applied to the bride and groom to bless them before the wedding.</p>
-                                <p class="dress-code">Dress Code: Yellow clothes recommended (clothes will get stained!)</p>
-                            </div>
+                
+                <div class="tab-content-wrapper">
+                    <!-- Day 1 Content -->
+                    <div class="tab-content active" id="day1">
+                        <div class="schedule-day-header">
+                            <h3>Day 1: Mehendi & Sangeet</h3>
+                            <p class="day-subtitle">Thursday, February 20, 2026</p>
                         </div>
-                        <div class="event highlight">
-                            <div class="event-header">
-                                <div>
-                                    <h4>Wedding Ceremony</h4>
-                                    <p class="time">Evening</p>
+                        
+                        <div class="schedule-timeline">
+                            <div class="schedule-event">
+                                <div class="event-time-badge">Afternoon</div>
+                                <div class="event-details-box">
+                                    <div class="event-icon-large">🎨</div>
+                                    <div class="event-info">
+                                        <h4>Mehendi Ceremony</h4>
+                                        <p>Traditional henna ceremony with beautiful designs. A fun and colorful event where intricate henna patterns are applied to the bride's hands and feet.</p>
+                                    </div>
                                 </div>
-                                <span class="event-toggle">+</span>
                             </div>
-                            <div class="event-details">
-                                <p>The main wedding ceremony - don't miss it! This is when Mahathi and Rahul will tie the knot in a traditional ceremony with family and friends.</p>
-                                <p><strong>Note:</strong> Please be punctual as the ceremony follows traditional auspicious timing.</p>
+                            
+                            <div class="schedule-event">
+                                <div class="event-time-badge">Evening</div>
+                                <div class="event-details-box">
+                                    <div class="event-icon-large">🎵</div>
+                                    <div class="event-info">
+                                        <h4>Sangeet Night</h4>
+                                        <p>Musical night filled with dance, music, and celebrations. The perfect time to showcase your dancing skills!</p>
+                                        <div class="event-special-note">💡 Want to perform? Let us know!</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Day 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span class="day">22</span>
-                        <span class="month">Feb</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Day 3: Reception</h3>
-                        <div class="event">
-                            <div class="event-header">
-                                <div>
-                                    <h4>Wedding Reception</h4>
-                                    <p class="time">Evening</p>
+                    
+                    <!-- Day 2 Content -->
+                    <div class="tab-content" id="day2">
+                        <div class="schedule-day-header">
+                            <h3>Day 2: Haldi & Wedding</h3>
+                            <p class="day-subtitle">Friday, February 21, 2026</p>
+                        </div>
+                        
+                        <div class="schedule-timeline">
+                            <div class="schedule-event">
+                                <div class="event-time-badge">Morning</div>
+                                <div class="event-details-box">
+                                    <div class="event-icon-large">✨</div>
+                                    <div class="event-info">
+                                        <h4>Haldi Ceremony</h4>
+                                        <p>Traditional turmeric ceremony for blessings. A paste made from turmeric, sandalwood, and other ingredients is applied to the bride and groom.</p>
+                                        <div class="event-dress-code">👕 Dress Code: Yellow clothes recommended (they will get stained!)</div>
+                                    </div>
                                 </div>
-                                <span class="event-toggle">+</span>
                             </div>
-                            <div class="event-details">
-                                <p>Celebration dinner and reception. Join us for a grand evening of food, drinks, and festivities as we celebrate the newly married couple!</p>
-                                <p><strong>Dress Code:</strong> Formal/Semi-formal Indian or Western attire</p>
+                            
+                            <div class="schedule-event featured-event">
+                                <div class="event-time-badge">Evening</div>
+                                <div class="event-details-box">
+                                    <div class="event-icon-large">💒</div>
+                                    <div class="event-info">
+                                        <h4>Wedding Ceremony ✨</h4>
+                                        <p>The main wedding ceremony - don't miss it! This is when Mahathi and Rahul will tie the knot in a traditional ceremony with family and friends.</p>
+                                        <div class="event-important">⏰ Please be punctual - ceremony follows traditional auspicious timing</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Delhi Reception -->
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span class="day">01</span>
-                        <span class="month">Mar</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Delhi Reception</h3>
-                        <div class="event">
-                            <div class="event-header">
-                                <div>
-                                    <h4>Reception in Delhi</h4>
-                                    <p class="time">Evening</p>
+                    
+                    <!-- Day 3 Content -->
+                    <div class="tab-content" id="day3">
+                        <div class="schedule-day-header">
+                            <h3>Day 3: Reception</h3>
+                            <p class="day-subtitle">Saturday, February 22, 2026</p>
+                        </div>
+                        
+                        <div class="schedule-timeline">
+                            <div class="schedule-event">
+                                <div class="event-time-badge">Evening</div>
+                                <div class="event-details-box">
+                                    <div class="event-icon-large">🥂</div>
+                                    <div class="event-info">
+                                        <h4>Wedding Reception</h4>
+                                        <p>Celebration dinner and reception. Join us for a grand evening of food, drinks, and festivities as we celebrate the newly married couple!</p>
+                                        <div class="event-dress-code">👗 Dress Code: Formal/Semi-formal Indian or Western attire</div>
+                                    </div>
                                 </div>
-                                <span class="event-toggle">+</span>
-                            </div>
-                            <div class="event-details">
-                                <p>Join us for a reception celebration in Delhi. Another opportunity to celebrate with family and friends!</p>
-                                <p><strong>Location:</strong> Delhi (venue details to be shared)</p>
                             </div>
                         </div>
                     </div>
