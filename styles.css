@@ -668,7 +668,7 @@ section h2 {
 .schedule-event {
     display: flex;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .event-time-badge {
@@ -680,9 +680,14 @@ section h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
-    min-width: 120px;
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
     text-align: center;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .event-details-box {
@@ -1358,6 +1363,7 @@ footer {
     .event-time-badge {
         min-width: auto;
         width: 100%;
+        max-width: 100%;
     }
     
     .event-details-box {
