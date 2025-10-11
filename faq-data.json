@@ -14,11 +14,15 @@
     },
     {
         "question": "Is there a dress code for the events?",
-        "answer": "WIP"
+        "answer": "We want you to feel free to dress up as you would like! Generally Indian weddings see colourful outfits, bold patterns, and jewellery. We will share ideas for inspiration soon!"
     },
     {
         "question": "How can I follow wedding planning updates and connect with other guests?",
         "answer": "Join our WhatsApp group to connect with other guests, coordinate travel plans, and stay updated with all wedding information! <a href='https://chat.whatsapp.com/IYT2ovVvPsqE9ElypSsf7p?mode=wwc' target='_blank' style='color: var(--secondary-color); font-weight: 600;'>Click here to join</a>"
+    },
+    {
+        "question": "Where else should I travel when I am in India?",
+        "answer": "We'd love to help you plan your trip. Get in touch! We will soon share our recommendations on the website as well."
     }
   ]
 }
