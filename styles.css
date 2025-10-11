@@ -1316,22 +1316,45 @@ footer {
     opacity: 0.5;
 }
 
-.rsvp-note {
-    margin: 1.5rem 0;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(135deg, rgba(176, 137, 104, 0.1) 0%, rgba(107, 44, 62, 0.05) 100%);
-    border-radius: var(--border-radius-sm);
-    border-left: 4px solid var(--burgundy);
-    width: 100%;
-    max-width: 600px;
-    transition: all 0.3s ease;
+.rsvp-section {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.rsvp-note p {
+.rsvp-text {
     margin: 0;
     color: var(--secondary-color);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+}
+
+.rsvp-button {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background: var(--gradient-elegant);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(92, 64, 51, 0.4);
+}
+
+.rsvp-button:active {
+    transform: translateY(-1px);
 }
 
 .greeting-card .footer-message {
@@ -1546,6 +1569,21 @@ footer {
     
     .greeting-card .venue-text {
         font-size: 1.1rem;
+    }
+    
+    .rsvp-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rsvp-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .rsvp-button {
+        padding: 0.85rem 2rem;
+        font-size: 0.95rem;
     }
     
     .greeting-card {

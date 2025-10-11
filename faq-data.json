@@ -1,8 +1,12 @@
 {
   "faqs": [
     {
-      "question": "Will you hate me if I don't come to the wedding?",
-      "answer": "Not at all! We completely understand - it’s not an easy trip. We’ll miss you, but we’ll still love you just the same ❤️ "
+        "question": "Will you hate me if I don't come to the wedding?",
+        "answer": "Not at all! We completely understand - it's not an easy trip. We'll miss you, but we'll still love you just the same ❤️ "
+    },
+    {
+        "question": "How do we RSVP?",
+        "answer": "Please fill out our RSVP form to let us know if you're coming! <a href='https://docs.google.com/forms/d/e/1FAIpQLSfSPEiLB_y7iPdaPMTFexGwpRvPT1DaCZzP_p2tdkA7QYoLJg/viewform' target='_blank' style='color: var(--secondary-color); font-weight: 600;'>Click here to RSVP</a>"
     },
     {
         "question": "What should we expect from the food?",
