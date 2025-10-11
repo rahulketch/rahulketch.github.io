@@ -15,37 +15,52 @@
     <div id="navbar-placeholder"></div>
 
     <!-- Details Section -->
-    <section class="details-new-section">
+    <section class="venue-details-section">
         <div class="container">
-            <h2 class="details-main-title">Venue Details</h2>
+            <h2 class="section-title">Venue Details</h2>
+            <p class="section-subtitle">Everything you need to know about getting to the celebration</p>
             
-            <div class="details-list">
-                <!-- Venue -->
-                <div class="detail-item">
-                    <h3 class="detail-question">Where is the venue?</h3>
-                    <div class="detail-answer">
-                        <p class="venue-title">Jenvi Conventions</p>
-                        <p class="venue-addr">SY NO 441, DEVAR YAMZAL Kompally-Tumkunta Road, Hyderabad, Telangana 500078, India</p>
-                        <a href="https://maps.app.goo.gl/ocPYmFavSFUXvknX9" target="_blank" class="maps-link">View on Google Maps →</a>
+            <div class="venue-cards-grid">
+                <!-- Venue Card -->
+                <div class="venue-card venue-card-primary">
+                    <div class="venue-card-icon">📍</div>
+                    <h3 class="venue-card-title">The Venue</h3>
+                    <div class="venue-card-content">
+                        <h4 class="venue-name">Jenvi Conventions</h4>
+                        <p class="venue-address">SY NO 441, DEVAR YAMZAL<br>Kompally-Tumkunta Road<br>Hyderabad, Telangana 500078, India</p>
+                        <a href="https://maps.app.goo.gl/ocPYmFavSFUXvknX9" target="_blank" class="venue-button">
+                            <span>Open in Google Maps</span>
+                            <span class="button-arrow">→</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Accommodation -->
-                <div class="detail-item">
-                    <h3 class="detail-question">Where to stay?</h3>
-                    <div class="detail-answer">
-                        <p>Accommodation will be arranged near the venue for guests coming from outside Hyderabad for 20th and 21st night.</p>
-                        <p class="sub-note">For people staying longer in Hyderabad, we will share some suggested places. Details to be shared.</p>
+                <!-- Accommodation Card -->
+                <div class="venue-card">
+                    <div class="venue-card-icon">🏨</div>
+                    <h3 class="venue-card-title">Accommodation</h3>
+                    <div class="venue-card-content">
+                        <p>Accommodation will be arranged near the venue for guests coming from outside Hyderabad for the nights of 20th and 21st.</p>
+                        <div class="venue-info-note">
+                            <p>For guests staying longer in Hyderabad, we'll share suggested places. Details coming soon!</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Travel -->
-                <div class="detail-item">
-                    <h3 class="detail-question">How to get there?</h3>
-                    <div class="detail-answer">
-                        <p class="airport-title">Rajiv Gandhi International Airport (HYD)</p>
-                        <p>Hyderabad's international airport is well connected to major cities worldwide. The airport is approximately 30-35 km from the venue.</p>
-                        <p class="transport-note"><strong>Transportation:</strong> From the airport, you can take cabs/taxis directly to the venue or your accommodation. Uber and Ola (ride-sharing apps) are also readily available.</p>
+                <!-- Travel Card -->
+                <div class="venue-card">
+                    <div class="venue-card-icon">✈️</div>
+                    <h3 class="venue-card-title">Getting There</h3>
+                    <div class="venue-card-content">
+                        <h4 class="airport-name">Rajiv Gandhi International Airport (HYD)</h4>
+                        <p class="airport-info">Hyderabad's international airport is well connected to major cities worldwide.</p>
+                        <div class="distance-badge">
+                            <span class="distance-icon">🚗</span>
+                            <span>30-35 km from venue</span>
+                        </div>
+                        <div class="venue-info-note">
+                            <p><strong>Transportation:</strong> Cabs, taxis, Uber, and Ola are readily available from the airport.</p>
+                        </div>
                     </div>
                 </div>
             </div>

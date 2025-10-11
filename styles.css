@@ -359,116 +359,195 @@ section h2 {
     background: white;
 }
 
-/* New Details Page - Clean & Compact Design */
-.details-new-section {
-    background: white;
-    padding: 3rem 0 4rem;
+/* Venue Details Page - Modern Card Design */
+.venue-details-section {
+    background: linear-gradient(to bottom, #fafaf8 0%, #ffffff 100%);
+    padding: 4rem 0 5rem;
     min-height: calc(100vh - 200px);
 }
 
-.details-main-title {
+.section-title {
     text-align: center;
+    color: var(--secondary-color);
     font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
-.details-list {
-    max-width: 700px;
+.venue-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
+    margin-top: 3rem;
 }
 
-.detail-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e5e5e5;
+.venue-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(176, 137, 104, 0.1);
 }
 
-.detail-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+.venue-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(92, 64, 51, 0.15);
 }
 
-.detail-question {
-    font-size: 1.4rem;
+.venue-card-primary {
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.08) 0%, rgba(107, 44, 62, 0.05) 100%);
+    border: 2px solid var(--accent-color);
+}
+
+.venue-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.venue-card-title {
+    font-size: 1.6rem;
     color: var(--secondary-color);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
 
-.detail-answer {
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-.detail-answer p {
-    margin-bottom: 0.6rem;
-    font-size: 0.98rem;
-}
-
-.venue-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.4rem !important;
-}
-
-.venue-addr {
+.venue-card-content {
     color: #666;
-    margin-bottom: 0.8rem !important;
+    line-height: 1.7;
 }
 
-.airport-title {
-    font-weight: 600;
+.venue-card-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.venue-name {
+    font-size: 1.5rem;
     color: var(--secondary-color);
-    font-size: 1.05rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
-.transport-note {
-    background: var(--bg-cream);
-    padding: 0.8rem;
-    border-radius: 6px;
-    margin-top: 0.6rem !important;
-    margin-bottom: 0 !important;
-}
-
-.sub-note {
-    font-size: 0.9rem;
+.venue-address {
     color: #777;
-    font-style: italic;
-    margin-top: 0.4rem !important;
+    text-align: center;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.8;
 }
 
-.maps-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1.2rem;
-    background: var(--secondary-color);
+.venue-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--gradient-elegant);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 0.9rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.2);
+    margin-top: 1rem;
 }
 
-.maps-link:hover {
-    background: var(--burgundy);
-    transform: translateX(3px);
+.venue-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(92, 64, 51, 0.3);
 }
 
-/* Responsive */
+.button-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.venue-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+.airport-name {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 0 0 0.75rem 0;
+    font-weight: 600;
+}
+
+.airport-info {
+    margin-bottom: 1rem !important;
+}
+
+.distance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.15) 0%, rgba(107, 44, 62, 0.1) 100%);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    margin: 1rem 0;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.distance-icon {
+    font-size: 1.2rem;
+}
+
+.venue-info-note {
+    background: var(--bg-light);
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.venue-info-note p {
+    margin: 0 !important;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Responsive for Venue Details */
 @media (max-width: 768px) {
-    .details-main-title {
+    .venue-details-section {
+        padding: 3rem 0 4rem;
+    }
+    
+    .section-title {
         font-size: 2rem;
     }
     
-    .detail-question {
-        font-size: 1.2rem;
+    .venue-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
     }
     
-    .details-new-section {
-        padding: 2rem 0 3rem;
+    .venue-card {
+        padding: 2rem;
+    }
+    
+    .venue-card-title {
+        font-size: 1.4rem;
+    }
+    
+    .venue-name {
+        font-size: 1.3rem;
+    }
+    
+    .venue-button {
+        padding: 0.9rem 1.25rem;
+        font-size: 0.95rem;
     }
 }
 
