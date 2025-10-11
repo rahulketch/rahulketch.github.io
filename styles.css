@@ -718,8 +718,41 @@ section h2 {
 .event-info p {
     color: #666;
     line-height: 1.7;
-    margin: 0;
+    margin: 0 0 1rem 0;
     font-size: 1rem;
+}
+
+.event-info p:last-child {
+    margin-bottom: 0;
+}
+
+.event-guest-info {
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.08) 0%, rgba(107, 44, 62, 0.05) 100%);
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-top: 1.25rem !important;
+    font-size: 0.95rem;
+}
+
+.event-image {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.event-image:hover img {
+    transform: scale(1.05);
 }
 
 /* =====================================
@@ -1012,6 +1045,33 @@ section h2 {
 
 .faq-answer a:hover {
     border-bottom-color: var(--accent-color);
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.08) 0%, rgba(107, 44, 62, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(176, 137, 104, 0.15);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-cta h3 {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    margin: 0 0 1rem 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.faq-cta p {
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
 }
 
 /* Additional styles for event details */
@@ -1373,6 +1433,15 @@ footer {
         font-size: 0.95rem;
     }
     
+    .event-guest-info {
+        padding: 0.85rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .event-image {
+        margin-top: 1.25rem;
+    }
+    
     .venue-content {
         grid-template-columns: 1fr;
     }
@@ -1399,6 +1468,18 @@ footer {
     
     .faq-answer-content {
         padding-top: 0.5rem;
+    }
+    
+    .faq-cta {
+        padding: 2rem 1.5rem;
+    }
+    
+    .faq-cta h3 {
+        font-size: 1.4rem;
+    }
+    
+    .faq-cta p {
+        font-size: 1rem;
     }
 }
 
