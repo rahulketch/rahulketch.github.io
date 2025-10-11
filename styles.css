@@ -398,11 +398,6 @@ section h2 {
     box-shadow: 0 12px 35px rgba(92, 64, 51, 0.15);
 }
 
-.venue-card-primary {
-    background: linear-gradient(135deg, rgba(176, 137, 104, 0.08) 0%, rgba(107, 44, 62, 0.05) 100%);
-    border: 2px solid var(--accent-color);
-}
-
 .venue-card-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
