@@ -1229,6 +1229,21 @@ section h2 {
     border-bottom: 1px solid transparent;
 }
 
+.attraction-item .external-link {
+    display: inline;
+    margin-left: 0;
+    color: var(--burgundy);
+    text-decoration: underline;
+    text-decoration-color: rgba(107, 44, 62, 0.3);
+    font-weight: 500;
+}
+
+.attraction-item .external-link:hover {
+    color: var(--accent-color);
+    text-decoration-color: var(--accent-color);
+}
+
+
 .external-link:hover,
 .hotel-link:hover {
     color: var(--burgundy);

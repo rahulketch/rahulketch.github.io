@@ -20,9 +20,69 @@
             <h2>Hyderabad Recommendations</h2>
             <p class="section-intro">Explore the beautiful city of Hyderabad! Here are our top recommendations for places to visit and where to stay.</p>
             
-            <div class="recommendations-content" id="recommendationsContainer">
-                <!-- Recommendations will be loaded dynamically from hyderabad-recommendations.json -->
-                <p style="text-align: center; color: #666;">Loading recommendations...</p>
+            <div class="recommendations-content">
+                <div class="recommendations-section">
+                    <h3>Places to Visit</h3>
+                    <ul class="attractions-list">
+                        <li class="attraction-item">
+                            <strong>Golconda Fort</strong>: Stay for sunset and take a guided tour for the history
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Charminar</strong>: Very crowded, be prepared. Good place to shop for bangles, pearls and other trinkets. See the monument and eat biryani at Shadab. Also check out the <a href="https://www.getyourguide.com/-t301923?locale=en-NL&currency=INR&surface=maps&funnel=nav&google_ads_click_source=&product_id=301923&option_id=529633&partner_id=CD951" target="_blank" class="external-link">walking tour</a>
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Shilparamam</strong>: Model of a traditional village. Lots of handicraft stores. Cultural events happen
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Chowmahalla Palace</strong>
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Falaknuma Palace</strong>: Have hi-tea
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Salar Jung Museum</strong>
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Birla Temple</strong>
+                        </li>
+                        <li class="attraction-item">
+                            <strong>Birla Planetarium</strong>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="recommendations-section">
+                    <h3>Where to Stay</h3>
+                    <p class="hotels-note">These are some suggestions, but in general look for hotels in Banjara Hills, Jubilee Hills or Madhapur.</p>
+                    <ul class="hotels-list">
+                        <li class="hotel-item">
+                            <a href="https://maps.app.goo.gl/XUv2tKyLXnHSFj5fA" target="_blank" class="hotel-link">
+                                <strong>Western Banjara</strong>
+                            </a>
+                        </li>
+                        <li class="hotel-item">
+                            <a href="https://maps.app.goo.gl/eoqN8wAw8QbyMn5q8" target="_blank" class="hotel-link">
+                                <strong>Bloom Hotel - Jubilee Hills</strong>
+                            </a>
+                        </li>
+                        <li class="hotel-item">
+                            <a href="https://maps.app.goo.gl/dbHBjYNhv6Xd39bF6" target="_blank" class="hotel-link">
+                                <strong>Deccan Serai</strong>
+                            </a>
+                        </li>
+                        <li class="hotel-item">
+                            <a href="https://maps.app.goo.gl/PNiEpwbgjjg6BTXB9" target="_blank" class="hotel-link">
+                                <strong>Westside Hotel</strong>
+                            </a>
+                        </li>
+                        <li class="hotel-item">
+                            <a href="https://maps.app.goo.gl/8v5fUixFBJDoYfcE9" target="_blank" class="hotel-link">
+                                <strong>Zostel Hyderabad</strong>
+                            </a>
+                            <span class="hotel-description"> - This one is a hostel, but if you want to meet some other people, it's a good option</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -31,85 +91,6 @@
 
     <script src="common.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Load Hyderabad Recommendations
-        async function loadHyderabadRecommendations() {
-            try {
-                const response = await fetch('hyderabad-recommendations.json');
-                const data = await response.json();
-                const container = document.getElementById('recommendationsContainer');
-                
-                // Clear loading message
-                container.innerHTML = '';
-                
-                // Create attractions section
-                const attractionsDiv = document.createElement('div');
-                attractionsDiv.className = 'recommendations-section';
-                attractionsDiv.innerHTML = '<h3>Places to Visit</h3>';
-                
-                const attractionsList = document.createElement('ul');
-                attractionsList.className = 'attractions-list';
-                
-                data.attractions.forEach((attraction) => {
-                    const listItem = document.createElement('li');
-                    listItem.className = 'attraction-item';
-                    
-                    if (attraction.link) {
-                        listItem.innerHTML = `
-                            <strong>${attraction.name}</strong>
-                            ${attraction.description ? `: ${attraction.description}` : ''}
-                            <a href="${attraction.link}" target="_blank" class="external-link">View Tour</a>
-                        `;
-                    } else {
-                        listItem.innerHTML = `
-                            <strong>${attraction.name}</strong>
-                            ${attraction.description ? `: ${attraction.description}` : ''}
-                        `;
-                    }
-                    
-                    attractionsList.appendChild(listItem);
-                });
-                
-                attractionsDiv.appendChild(attractionsList);
-                container.appendChild(attractionsDiv);
-                
-                // Create hotels section
-                const hotelsDiv = document.createElement('div');
-                hotelsDiv.className = 'recommendations-section';
-                hotelsDiv.innerHTML = `
-                    <h3>Where to Stay</h3>
-                    <p class="hotels-note">${data.hotels.note}</p>
-                `;
-                
-                const hotelsList = document.createElement('ul');
-                hotelsList.className = 'hotels-list';
-                
-                data.hotels.recommendations.forEach((hotel) => {
-                    const listItem = document.createElement('li');
-                    listItem.className = 'hotel-item';
-                    
-                    listItem.innerHTML = `
-                        <a href="${hotel.link}" target="_blank" class="hotel-link">
-                            <strong>${hotel.name}</strong>
-                        </a>
-                        ${hotel.description ? `<span class="hotel-description"> - ${hotel.description}</span>` : ''}
-                    `;
-                    
-                    hotelsList.appendChild(listItem);
-                });
-                
-                hotelsDiv.appendChild(hotelsList);
-                container.appendChild(hotelsDiv);
-                
-            } catch (error) {
-                console.error('Error loading Hyderabad recommendations:', error);
-                document.getElementById('recommendationsContainer').innerHTML = '<p style="text-align: center; color: red;">Error loading recommendations. Please refresh the page.</p>';
-            }
-        }
-        
-        // Load recommendations when page loads
-        document.addEventListener('DOMContentLoaded', loadHyderabadRecommendations);
-    </script>
 </body>
 </html>
 
