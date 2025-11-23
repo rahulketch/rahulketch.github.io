@@ -1148,6 +1148,108 @@ section h2 {
     margin: 0;
 }
 
+/* Hyderabad Recommendations Section */
+.hyderabad-section {
+    background: linear-gradient(135deg, #fff 0%, var(--bg-light) 100%);
+    padding: 4rem 0;
+}
+
+.section-intro {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: -1rem auto 2.5rem;
+}
+
+.recommendations-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recommendations-section {
+    background: white;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.08);
+    transition: all 0.3s ease;
+}
+
+.recommendations-section:hover {
+    box-shadow: 0 8px 25px rgba(92, 64, 51, 0.15);
+    transform: translateY(-3px);
+}
+
+.recommendations-section h3 {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.75rem;
+}
+
+.attractions-list,
+.hotels-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attraction-item,
+.hotel-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--bg-light);
+    line-height: 1.6;
+    color: #666;
+}
+
+.attraction-item:last-child,
+.hotel-item:last-child {
+    border-bottom: none;
+}
+
+.attraction-item strong,
+.hotel-item strong {
+    color: var(--burgundy);
+    font-size: 1.05rem;
+}
+
+.external-link,
+.hotel-link {
+    display: inline-block;
+    margin-left: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.external-link:hover,
+.hotel-link:hover {
+    color: var(--burgundy);
+    border-bottom-color: var(--burgundy);
+}
+
+.hotels-note {
+    color: var(--burgundy);
+    font-style: italic;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(176, 137, 104, 0.08) 0%, rgba(107, 44, 62, 0.05) 100%);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.hotel-description {
+    color: #666;
+    font-size: 0.95rem;
+}
+
 /* Additional styles for event details */
 .dress-code {
     color: var(--accent-color) !important;
@@ -1577,6 +1679,31 @@ footer {
     
     .faq-cta p {
         font-size: 1rem;
+    }
+    
+    /* Hyderabad Recommendations - Tablet */
+    .hyderabad-section {
+        padding: 3rem 0;
+    }
+    
+    .recommendations-section {
+        padding: 1.5rem;
+    }
+    
+    .recommendations-section h3 {
+        font-size: 1.4rem;
+    }
+    
+    .attraction-item,
+    .hotel-item {
+        padding: 0.75rem 0;
+    }
+    
+    .external-link,
+    .hotel-link {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
 }
 

@@ -1,0 +1,61 @@
+{
+  "title": "Hyderabad Recommendations",
+  "attractions": [
+    {
+      "name": "Golconda Fort",
+      "description": "Stay for sunset and take a guided tour for the history"
+    },
+    {
+      "name": "Charminar",
+      "description": "Very crowded, be prepared. Good place to shop for bangles, pearls and other trinkets. See the monument and eat biryani at Shadab. Also check out the walking tour",
+      "link": "https://www.getyourguide.com/-t301923?locale=en-NL&currency=INR&surface=maps&funnel=nav&google_ads_click_source=&product_id=301923&option_id=529633&partner_id=CD951"
+    },
+    {
+      "name": "Chowmahalla Palace"
+    },
+    {
+      "name": "Falaknuma Palace",
+      "description": "Have hi-tea"
+    },
+    {
+      "name": "Salar Jung Museum"
+    },
+    {
+      "name": "Birla Temple"
+    },
+    {
+      "name": "Birla Planetarium"
+    },
+    {
+      "name": "Shilparamam",
+      "description": "Model of a traditional village. Lots of handicraft stores. Cultural events happen"
+    }
+  ],
+  "hotels": {
+    "note": "These are some suggestions, but in general look for hotels in Banjara Hills, Jubilee Hills or Madhapur.",
+    "recommendations": [
+      {
+        "name": "Western Banjara",
+        "link": "https://maps.app.goo.gl/XUv2tKyLXnHSFj5fA"
+      },
+      {
+        "name": "Bloom Hotel - Jubilee Hills",
+        "link": "https://maps.app.goo.gl/eoqN8wAw8QbyMn5q8"
+      },
+      {
+        "name": "Deccan Serai",
+        "link": "https://maps.app.goo.gl/dbHBjYNhv6Xd39bF6"
+      },
+      {
+        "name": "Westside Hotel",
+        "link": "https://maps.app.goo.gl/PNiEpwbgjjg6BTXB9"
+      },
+      {
+        "name": "Zostel Hyderabad",
+        "description": "This one is a hostel, but if you want to meet some other people, it's a good option",
+        "link": "https://maps.app.goo.gl/8v5fUixFBJDoYfcE9"
+      }
+    ]
+  }
+}
+

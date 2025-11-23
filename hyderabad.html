@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Recommendations - Mahathi & Rahul Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>window.currentPage = 'hyderabad';</script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hyderabad Recommendations Section -->
+    <section class="hyderabad-section" id="hyderabad-recommendations">
+        <div class="container">
+            <h2>Hyderabad Recommendations</h2>
+            <p class="section-intro">Explore the beautiful city of Hyderabad! Here are our top recommendations for places to visit and where to stay.</p>
+            
+            <div class="recommendations-content" id="recommendationsContainer">
+                <!-- Recommendations will be loaded dynamically from hyderabad-recommendations.json -->
+                <p style="text-align: center; color: #666;">Loading recommendations...</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Load Hyderabad Recommendations
+        async function loadHyderabadRecommendations() {
+            try {
+                const response = await fetch('hyderabad-recommendations.json');
+                const data = await response.json();
+                const container = document.getElementById('recommendationsContainer');
+                
+                // Clear loading message
+                container.innerHTML = '';
+                
+                // Create attractions section
+                const attractionsDiv = document.createElement('div');
+                attractionsDiv.className = 'recommendations-section';
+                attractionsDiv.innerHTML = '<h3>Places to Visit</h3>';
+                
+                const attractionsList = document.createElement('ul');
+                attractionsList.className = 'attractions-list';
+                
+                data.attractions.forEach((attraction) => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'attraction-item';
+                    
+                    if (attraction.link) {
+                        listItem.innerHTML = `
+                            <strong>${attraction.name}</strong>
+                            ${attraction.description ? `: ${attraction.description}` : ''}
+                            <a href="${attraction.link}" target="_blank" class="external-link">View Tour</a>
+                        `;
+                    } else {
+                        listItem.innerHTML = `
+                            <strong>${attraction.name}</strong>
+                            ${attraction.description ? `: ${attraction.description}` : ''}
+                        `;
+                    }
+                    
+                    attractionsList.appendChild(listItem);
+                });
+                
+                attractionsDiv.appendChild(attractionsList);
+                container.appendChild(attractionsDiv);
+                
+                // Create hotels section
+                const hotelsDiv = document.createElement('div');
+                hotelsDiv.className = 'recommendations-section';
+                hotelsDiv.innerHTML = `
+                    <h3>Where to Stay</h3>
+                    <p class="hotels-note">${data.hotels.note}</p>
+                `;
+                
+                const hotelsList = document.createElement('ul');
+                hotelsList.className = 'hotels-list';
+                
+                data.hotels.recommendations.forEach((hotel) => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'hotel-item';
+                    
+                    listItem.innerHTML = `
+                        <a href="${hotel.link}" target="_blank" class="hotel-link">
+                            <strong>${hotel.name}</strong>
+                        </a>
+                        ${hotel.description ? `<span class="hotel-description"> - ${hotel.description}</span>` : ''}
+                    `;
+                    
+                    hotelsList.appendChild(listItem);
+                });
+                
+                hotelsDiv.appendChild(hotelsList);
+                container.appendChild(hotelsDiv);
+                
+            } catch (error) {
+                console.error('Error loading Hyderabad recommendations:', error);
+                document.getElementById('recommendationsContainer').innerHTML = '<p style="text-align: center; color: red;">Error loading recommendations. Please refresh the page.</p>';
+            }
+        }
+        
+        // Load recommendations when page loads
+        document.addEventListener('DOMContentLoaded', loadHyderabadRecommendations);
+    </script>
+</body>
+</html>
+
