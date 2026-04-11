@@ -1242,21 +1242,32 @@ section h2 {
     min-height: calc(100vh - 200px);
 }
 
+/* Photos page only: clearer sans for long words (e.g. Hyderabad) and small titles */
+.photos-section .section-title {
+    font-family: 'Source Sans 3', var(--body-font), sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
 .photos-section .section-subtitle {
+    font-family: 'Source Sans 3', var(--body-font), sans-serif;
     text-align: center;
     color: #666;
     font-size: 1.05rem;
     margin: -0.5rem auto 0.75rem;
     max-width: 640px;
     line-height: 1.6;
+    font-weight: 400;
 }
 
-.photos-note {
+.photos-section .photos-note {
+    font-family: 'Source Sans 3', var(--body-font), sans-serif;
     text-align: center;
     color: #888;
     font-size: 0.95rem;
     margin-bottom: 2.5rem;
     font-style: italic;
+    font-weight: 400;
 }
 
 .photos-album-list {
@@ -1315,31 +1326,32 @@ section h2 {
     transform: scale(1.04);
 }
 
-.photos-album-title {
-    font-family: var(--heading-font);
+.photos-section .photos-album-title {
+    font-family: 'Source Sans 3', var(--body-font), sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--secondary-color);
     text-align: center;
-    line-height: 1.35;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
     transition: color 0.25s ease;
 }
 
-.photos-album-card:hover .photos-album-title {
+.photos-section .photos-album-card:hover .photos-album-title {
     color: var(--burgundy);
 }
 
 @media (max-width: 600px) {
-    .photos-album-list {
+    .photos-section .photos-album-list {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 1rem;
     }
 
-    .photos-album-card {
+    .photos-section .photos-album-card {
         padding: 0.75rem 0.75rem 1rem;
     }
 
-    .photos-album-title {
+    .photos-section .photos-album-title {
         font-size: 1.05rem;
     }
 }
