@@ -11,7 +11,7 @@ function insertNavbar(activePage) {
             <li><a href="outfits.html" ${activePage === 'outfits' ? 'class="active"' : ''}>Outfits</a></li>
             <li><a href="faq.html" ${activePage === 'faq' ? 'class="active"' : ''}>FAQ</a></li>
             <li><a href="hyderabad.html" ${activePage === 'hyderabad' ? 'class="active"' : ''}>Hyderabad</a></li>
-            <li><a href="photos-and-videos.html" ${activePage === 'photos' ? 'class="active"' : ''}>Photos and Videos</a></li>
+            <li><a href="gallery.html" ${activePage === 'gallery' ? 'class="active"' : ''}>Gallery</a></li>
         </ul>
     </nav>`;
     
